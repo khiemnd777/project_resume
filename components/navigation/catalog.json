@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_navigation_catalogs",
+  "info": {
+    "name": "Catalog",
+    "icon": "angle-right",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Children": {
+      "collection": "post-catalogs"
+    },
+    "Router": {
+      "model": "router"
+    }
+  }
+}

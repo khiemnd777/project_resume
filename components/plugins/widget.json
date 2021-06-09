@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_plugins_widgets",
+  "info": {
+    "name": "Widget",
+    "icon": "icons",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Parameters": {
+      "type": "component",
+      "repeatable": true,
+      "component": "plugins.parameter"
+    },
+    "Placeholder": {
+      "type": "string"
+    },
+    "widget": {
+      "model": "widget"
+    },
+    "ConfigurationName": {
+      "type": "string"
+    },
+    "Enabled": {
+      "type": "boolean",
+      "default": false
+    },
+    "BackgroundColor": {
+      "type": "string"
+    },
+    "BackgroundImage": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.slider"
+    },
+    "Name": {
+      "type": "string"
+    }
+  }
+}

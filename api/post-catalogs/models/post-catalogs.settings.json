@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "post_catalogs",
+  "info": {
+    "name": "Post Catalogs",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Children": {
+      "collection": "post-catalogs"
+    },
+    "DisplayName": {
+      "type": "string"
+    },
+    "Root": {
+      "type": "boolean",
+      "default": true
+    },
+    "DisplayOrder": {
+      "type": "integer",
+      "default": 0
+    },
+    "Icon": {
+      "type": "enumeration",
+      "enum": [
+        "icon_"
+      ]
+    },
+    "FeaturePosts": {
+      "type": "component",
+      "repeatable": true,
+      "component": "post.feature-post"
+    },
+    "FeatureCatalogs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "post.feature-catalog"
+    },
+    "Short": {
+      "type": "text"
+    },
+    "Hidden": {
+      "type": "boolean",
+      "default": false
+    },
+    "Router": {
+      "model": "router"
+    },
+    "Posts": {
+      "via": "Catalog",
+      "collection": "post-items"
+    },
+    "Slug": {
+      "type": "uid",
+      "required": true
+    }
+  }
+}

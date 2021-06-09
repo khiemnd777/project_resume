@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "templates",
+  "info": {
+    "name": "template",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false,
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Parameters": {
+      "type": "component",
+      "repeatable": true,
+      "component": "plugins.parameter"
+    },
+    "FriendlyName": {
+      "type": "string"
+    },
+    "Widgets": {
+      "type": "component",
+      "repeatable": true,
+      "component": "plugins.widget"
+    }
+  }
+}

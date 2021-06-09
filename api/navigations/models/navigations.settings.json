@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "navigations",
+  "info": {
+    "name": "Navigations",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Children": {
+      "type": "dynamiczone",
+      "components": [
+        "navigation.catalog",
+        "navigation.post",
+        "navigation.others"
+      ],
+      "max": 1
+    },
+    "Icon": {
+      "type": "enumeration",
+      "enum": [
+        "icon_"
+      ]
+    },
+    "Path": {
+      "type": "string",
+      "default": "/",
+      "required": true
+    },
+    "DisplayName": {
+      "type": "string"
+    }
+  }
+}
